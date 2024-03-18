@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Create welcome page with main.html file and assign it to the root path
 @app.route('/')
 def home():
-    return render_template('main.html', name='osvaldo')
+    return render_template('main.html', name='Hasan')
 
 # Write a function named `greet` which uses template file named `greet.html` given under 
 # `templates` folder. it takes parameters from query string on URL, assign that parameter 
@@ -30,7 +30,7 @@ def login():
     if request.method == 'POST':
         user_name = request.form['username']
         password = request.form['password']
-        if password == 'clarusway':
+        if password == 'hasanmrhn':
             return render_template('secure.html', user=user_name.title())
         else:
             return render_template('login.html', user=user_name.title(), control = True)
